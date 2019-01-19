@@ -26,7 +26,6 @@ author: Brett Sheleski
 markdown: kramdown
 #plugins:
 #  - jekyll-feed
-source: "site"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
