@@ -40,3 +40,5 @@ source: "site"
 #   - vendor/ruby/
 
 host: 0.0.0.0
+
+theme: jekyll-theme-tactile
