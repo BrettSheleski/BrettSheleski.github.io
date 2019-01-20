@@ -1,0 +1,20 @@
+---
+---
+
+html {
+    min-height: 100%;
+    position: relative;
+
+    body {
+        margin-bottom: 100px;
+        background-color: inherit;
+
+        footer {
+            height: 100px;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+}

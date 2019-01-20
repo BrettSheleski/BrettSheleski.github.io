@@ -22,63 +22,29 @@ layout: home
     <p class="lead">
         Here are some of the projects I work on when not working.
     </p>
+
     <div class="row">
+    {% for post in site.posts limit:3 %}
         <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-            
-            <div class="card-body">
-            <h3 class="cart-title">
-                <a href="https://github.com/BrettSheleski/comchap">Comchap</a>
-            </h3>
-            <p class="card-text">Bash script for adding chapters to recorded TV shows files.</p>
-                <div class="btn-group">
-                <a href="https://github.com/BrettSheleski/comchap" class="btn btn-sm btn-outline-primary">Go to Project</a>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-            <div class="card-body">
-            <h3 class="card-title"><a href="https://github.com/BrettSheleski/SmartThingsPublic">SmartThings</a></h3>
-            <p class="card-text">Device Handlers and SmartApps for integrating into the SmartThings ecosystem.</p>
-            <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#smartThingsMore">
-                More
-            </button>
-            <div class="row collapse" id="smartThingsMore">
-                <div class="col-6">
-                    <strong><a href="https://github.com/BrettSheleski/SmartThingsPublic/tree/master/devicetypes/brettsheleski">Device Handlers</a></strong>
-                <div class="list-group">
-                    <a class="list-group-item" href="https://github.com/BrettSheleski/SmartThingsPublic/tree/master/devicetypes/brettsheleski/tasmota.src">Tasmota</a>
-                    <a class="list-group-item" href="https://github.com/BrettSheleski/SmartThingsPublic/tree/master/devicetypes/brettsheleski/roku.src">Roku</a>
-                    <a class="list-group-item" href="https://github.com/BrettSheleski/SmartThingsPublic/tree/master/devicetypes/brettsheleski/composite-switch.src">Composite Switch</a>
-                </div>
-                </div>
-                <div class="col-6">
-                    <strong><a href="https://github.com/BrettSheleski/SmartThingsPublic/tree/master/smartapps/brettsheleski">SmartApps</a></strong>
-                    <div class="list-group">
-                        <a class="list-group-item" href="https://github.com/BrettSheleski/SmartThingsPublic/tree/master/smartapps/brettsheleski/tasmota.src">Tasmota</a>
+            <div class="card mb-4 box-shadow">    
+                <div class="card-body">
+                <h3 class="cart-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h3>
+                <p class="card-text">
+                    {{ post.description }}
+                </p>
+                    <div class="btn-group">
+                    <a href="{{ post.url }}" class="btn btn-sm btn-outline-primary">View Post</a>
                     </div>
                 </div>
             </div>
-            </div>
         </div>
-        </div>
-        <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-            
-            <div class="card-body">
-            <h3 class="card-title">
-                <a href="https://github.com/BrettSheleski/DataTools">Data Tools</a>
-            </h3>
-            <p class="card-text">This is my old Windows Forms application for connecting to databases of various vendors and having a consistent experience among them. Also handy for navigating relational data.</p>
-            <div class="btn-group">
-                <a href="https://github.com/BrettSheleski/DataTools" class="btn btn-sm btn-outline-primary">Go to Project</a>
-            </div>
-            </div>
-        </div>
-        </div>
+    {% endfor %}
     </div>
-    </div>
+    <a href="posts.html" class="btn btn-primary">
+        View All Posts
+    </a>
 </div>
 </main>
+
