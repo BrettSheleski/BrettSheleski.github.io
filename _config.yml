@@ -41,7 +41,15 @@ markdown: kramdown
 host: 0.0.0.0
 
 theme: jekyll-theme-tactile
+exclude: 
+  - .vs/
 
 defaults:
+  - scope:
+      path: ""
     values:
       layout: "default"
+      image: /images/me.jpg
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag

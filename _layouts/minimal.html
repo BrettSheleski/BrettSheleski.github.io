@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-light">
 <head>
 {% include meta/standard.html %}
 {% include meta/favicon.html %}
@@ -8,8 +8,9 @@
 {% include google-analytics.html %}
 </head>
 <body>
-{{ content }}  
-{% include footer.html %}
+<main role="main" class="container">
+    {{ content }}
+</main>
 {% include scripts/bootstrap.html %}
 </body>
 </html>
