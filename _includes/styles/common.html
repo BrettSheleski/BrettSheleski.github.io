@@ -1,1 +1,2 @@
-<link rel="stylesheet" href="/styles/styles.css" >
+<link rel="stylesheet" href="{{ '/styles/styles.css' | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" >
+
