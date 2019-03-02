@@ -23,7 +23,12 @@ github_username:  BrettSheleski
 author: Brett Sheleski
 
 # Build settings
+sass:
+    sass_dir: styles
 markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
 #plugins:
 #  - jekyll-feed
 # Exclude from processing.

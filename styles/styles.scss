@@ -1,11 +1,22 @@
 ---
 ---
 
+@import 'highlight';
+
 header, footer{
     background-image: url(/images/background-1200.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.highlighter-rouge > div.highlight > pre.highlight{
+    padding: 5px;
+}
+
+.card.card-github-gist .gist .gist-file{
+    margin-bottom: 0;
+    border: none;
 }
 
 // Extra small devices (portrait phones, less than 576px)
