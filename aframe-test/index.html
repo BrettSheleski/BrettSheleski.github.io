@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="things.js"></script>
+    <script src="arena.js"></script>
+  </head>
+  <body>
+    <a-scene id="scene">
+      <a-camera wasd-controls-enabled="false">
+        <a-cursor geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" color="#FFFFFF" raycaster="objects: .locationSphere, .homebutton">
+        </a-cursor>
+      </a-camera>
+    
+      <a-entity windows-motion-controls laser-controls="hand: left" raycaster="objects: .locationSphere, .homebutton"></a-entity>
+      <a-entity windows-motion-controls laser-controls="hand: right" raycaster="objects: .locationSphere, .homebutton"></a-entity>
+      
+      
+      <a-sky id="sky" src="space-360.png" rotation="0 -130 0"></a-sky>
+
+<!--
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#a5009a"></a-sphere>
+      <a-sphere position="-5 1.25 0" radius="1.25" color="#4244d6"></a-sphere>      
+      <a-sphere position="0 1.25 5" radius="1.25" color="#336b3b"></a-sphere>
+      <a-sphere position="5 1.25 0" radius="1.25" color="#774100"></a-sphere>
+-->
+
+      <a-entity arena="manifest: manifest.json" ></a-entity>
+    </a-scene>
+  </body>
+</html>
+
+
+
+
+

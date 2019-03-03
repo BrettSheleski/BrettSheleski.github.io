@@ -1,0 +1,36 @@
+{
+    "places":{
+        "start" : {
+            "image": "loading.jpg",
+            "video": "vid1.mp4",
+            "name": "Video Numero Uno",
+            "things": [
+                {
+                    "kind": "navigation",
+                    "payload" : {
+                        "position": {"x": 4, "y": 3, "z": -5},
+                        "title" : "Video Number 2",
+                        "place" : "two",
+                        "image" : "boatdock.jpg"
+                    }
+                }
+            ]
+        },
+        "two" : {
+            "image": "loading.jpg",
+            "video": "vid2.mp4",
+            "name": "Video #2"
+        },
+        "three" :
+        {
+            "image": "loading.jpg",
+            "video": "vid3.mp4",
+            "name": "Video Three"
+        },
+        "iv" :{
+            "video": "vid4.mp4",
+            "name": "Video IV"
+        }  
+    },
+    "startPlace": "start"
+}
