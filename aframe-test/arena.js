@@ -1,6 +1,17 @@
 AFRAME.registerComponent("arena", {
     schema : {
-        manifest : { type: 'asset'}
+        manifest : { type: 'asset'},
+        sky : {type: 'selector'},
+        videoSphere : {type: 'selector'},
+        cursor : {type: 'selector'}
+    },
+    helpers : {
+        fadeIn : function(el, t){
+
+        },
+        fadeOut : function(el, t){
+
+        }
     },
     init: function(){
         var self = this;
@@ -8,6 +19,8 @@ AFRAME.registerComponent("arena", {
         new THREE.FileLoader().load(self.data.manifest, function(json){
            self.initManifest(JSON.parse(json)); 
         });
+
+        self.el.sceneEl.add
 
     },
     initManifest : function(manifest){
@@ -17,8 +30,19 @@ AFRAME.registerComponent("arena", {
     },
     loadPlace : function(place){
         
+        var scene = this.el.sceneEl;
+
         // set staticImage background
         // load video
+
+        if (place.video != null){
+            this.data.videoSphere.setAttribute("src", place.video);
+            this.data.videoSphere.setAttribute("visible", true);
+
+            this.data.sky.setAttribute("visible", false);
+        }
+        
+
         // start playback of video
 
         // place things in scene
