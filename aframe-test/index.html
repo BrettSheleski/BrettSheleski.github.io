@@ -8,18 +8,9 @@
   </head>
   <body>
     <a-scene id="scene">
-        <a-assets>
-            <a-mixin id="cube" geometry="primitive: box"></a-mixin>
-            <a-mixin id="cube-hovered" material="color: magenta"></a-mixin>
-            <a-mixin id="cube-selected" material="color: cyan"></a-mixin>
-            <a-mixin id="red" material="color: red"></a-mixin>
-            <a-mixin id="green" material="color: green"></a-mixin>
-            <a-mixin id="blue" material="color: blue"></a-mixin>
-            <a-mixin id="yellow" material="color: yellow"></a-mixin>
-            <a-mixin id="sphere" geometry="primitive: sphere"></a-mixin>
-          </a-assets>
-        <a-entity camera look-controls mouse-cursor>
-            <a-entity position="0 0 -3"
+        <a-entity camera look-controls="pointerLockEnabled: true;" mouse-cursor>
+            <a-entity id="cursor"
+                    position="0 0 -3" 
                     geometry="primitive: ring; radiusInner: 0.1; radiusOuter: 0.15"
                     material="color: #FFFFFFEE; shader: flat"
                     cursor="rayOrigin: mouse"
@@ -35,7 +26,7 @@
       <a-entity windows-motion-controls laser-controls="hand: right" raycaster="objects: .clickable"></a-entity>
       
       <a-sky id="sky" src="space-360.png" rotation="0 -130 0"></a-sky>
-      <a-videosphere id="videoSphere" visible="false" material="radius: 10"></a-videosphere>
+      <a-videosphere id="videoSphere" visible="false" geometry="radius: 10"></a-videosphere>
       <a-entity arena="manifest: manifest.json; sky: #sky; videoSphere: #videoSphere; cursor: #cursor" ></a-entity>
     
     </a-scene>

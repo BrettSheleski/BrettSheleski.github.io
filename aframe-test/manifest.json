@@ -2,7 +2,7 @@
     "places":{
         "start" : {
             "image": "loading.jpg",
-            "video": "vid1.mp4",
+            "video": "vid2.mp4",
             "name": "Video Numero Uno",
             "things": [
                 {

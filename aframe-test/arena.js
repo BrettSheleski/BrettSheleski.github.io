@@ -3,7 +3,6 @@ AFRAME.registerComponent("arena", {
         manifest : { type: 'asset'},
         sky : {type: 'selector'},
         videoSphere : {type: 'selector'},
-        cursor : {type: 'selector'}
     },
     helpers : {
         fadeIn : function(el, t){
@@ -11,7 +10,7 @@ AFRAME.registerComponent("arena", {
         },
         fadeOut : function(el, t){
 
-        }
+        },
     },
     init: function(){
         var self = this;
@@ -20,8 +19,16 @@ AFRAME.registerComponent("arena", {
            self.initManifest(JSON.parse(json)); 
         });
 
-        self.el.sceneEl.add
-
+        self.el.sceneEl.addEventListener("enter-vr", this.eventListeners.onEnterVR);
+        self.el.sceneEl.addEventListener("exit-vr", this.eventListeners.onExitVR);
+    },
+    eventListeners: {
+        onEnterVR : function(){
+            
+        },
+        onExitVR : function(){
+            
+        }
     },
     initManifest : function(manifest){
         var startPlace = manifest.places[manifest.startPlace];
