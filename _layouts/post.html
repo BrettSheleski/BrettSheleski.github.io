@@ -1,18 +1,27 @@
 <!doctype html>
 <html lang="en" class="bg-light">
+
 <head>
-{% include meta/standard.html %}
-{% include meta/favicon.html %}
-{% include styles/bootstrap.html %}
-{% include styles/common.html %}
-{% include google-analytics.html %}
+    {% include meta/standard.html %}
+    {% include meta/favicon.html %}
+    {% include styles/bootstrap.html %}
+    {% include styles/common.html %}
+    {% include google-analytics.html %}
 </head>
+
 <body>
-{% include header.html %}
-<main role="main" class="container">
-    {{ content }}  
-</main>
-{% include footer.html %}
-{% include scripts/bootstrap.html %}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=225377521679770&autoLogAppEvents=1"></script>
+    {% include header.html %}
+    <main role="main" class="container">
+        <div>
+            {{ content }}
+        </div>
+        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="25" data-width="100%"></div>
+    </main>
+    {% include footer.html %}
+    {% include scripts/bootstrap.html %}
 </body>
+
 </html>
